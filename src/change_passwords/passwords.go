@@ -17,7 +17,7 @@ func main() {
 	logger(err)
 	defer db.Close()
 
-	rows, err := db.Query("select user from user where user not in ('massa2014', 'root', 'mysql.session','mysql.sys', 'KFK_IT', 'KFK_IT', 'KFK_Replicator2', 'nwrvam', 'chartio') and host = '%' order by user desc;")
+	rows, err := db.Query("select user from user where user not in ('some_user', 'some_other_user') and host = '%' order by user desc;")
 	logger(err)
 	defer rows.Close()
 
