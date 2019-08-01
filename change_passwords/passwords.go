@@ -1,6 +1,7 @@
 package main
 
 import (
+	"change_passwords/utilities"
 	"database/sql"
 	"log"
 	"os"
@@ -15,6 +16,7 @@ func main() {
 
 	db, err := sql.Open("mysql", "user:password@tcp(127.0.0.1:3306)/mysql") //git
 	logger(err)
+	utilities.Logger(err)
 	defer db.Close()
 
 	rows, err := db.Query("select user from user where user not in ('some_user', 'some_other_user') and host = '%' order by user desc;")
