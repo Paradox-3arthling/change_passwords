@@ -1,0 +1,5 @@
+#Ignore exe's
+*.exe
+
+#Ignore archied files
+*.a
