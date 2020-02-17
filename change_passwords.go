@@ -1,10 +1,11 @@
 package main
 
 import (
-	"change_passwords/utilities"
 	"database/sql"
 	"log"
 	"os"
+
+	"github.com/Paradox-3arthling/change_passwords/utilities"
 
 	_ "github.com/go-sql-driver/mysql"
 )
